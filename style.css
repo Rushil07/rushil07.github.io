@@ -27,28 +27,65 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 8%;
-  display: flex;
-  gap: 24px;
-  background: rgba(11, 15, 20, 0.6);
-  backdrop-filter: blur(8px);
+  height: 72px;
+  padding: 0 6%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background: rgba(11, 15, 20, 0.65);
+  backdrop-filter: blur(10px);
   z-index: 100;
 }
 
-.nav a {
+/* LEFT */
+.nav-left .logo {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-main);
+}
+
+/* CENTER */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.nav-center a {
   color: var(--text-muted);
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.2s ease;
 }
 
-.nav a:hover {
+.nav-center a:hover {
   color: var(--accent);
+}
+
+/* RIGHT */
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resume-btn {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, border 0.2s ease;
+}
+
+.resume-btn:hover {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: var(--accent);
 }
 
 /* HERO */
 .hero {
-  padding: 160px 8% 120px;
+  padding-top: 160px;
 }
 .hero h1 {
   font-size: 3.2rem;
