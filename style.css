@@ -100,7 +100,7 @@ body {
 
 /* ABOUT */
 .about {
-  padding: 40px 8%;
+  padding: 40px 0;
   max-width: 900px;
 }
 
@@ -118,7 +118,7 @@ body {
 
 /* CATEGORIES */
 .category {
-  padding: 80px 8%;
+  padding: 80px 0;
 }
 
 
@@ -179,7 +179,7 @@ body {
 
 /* CONTACT */
 .contact {
-  padding: 60px 8%;
+  padding: 60px 0;
   border-top: 1px solid #141a22;
 }
 
