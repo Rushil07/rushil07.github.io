@@ -14,24 +14,27 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #0b0f14;
-  color: #e6e6e6;
-  line-height: 1.6;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
 }
+
 
 /* HERO */
 .hero {
-  padding: 100px 8%;
+  padding: 120px 8% 80px;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 3.2rem;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
 }
 
 .subtitle {
-  color: #9aa4b2;
-  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  max-width: 600px;
 }
 
 /* ABOUT */
@@ -42,17 +45,21 @@ body {
 
 .tags span {
   display: inline-block;
-  background: #141a22;
-  padding: 6px 12px;
-  border-radius: 20px;
-  margin: 8px 8px 0 0;
-  font-size: 0.85rem;
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin: 10px 10px 0 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
+
 
 /* CATEGORIES */
 .category {
-  padding: 60px 8%;
+  padding: 80px 8%;
 }
+
 
 .category h2 {
   margin-bottom: 30px;
@@ -61,11 +68,19 @@ body {
 
 /* CARD */
 .card {
-  background: #141a22;
-  padding: 25px;
-  border-radius: 14px;
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 16px;
   max-width: 900px;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
 
 .card h3 {
   margin-top: 0;
@@ -74,9 +89,11 @@ body {
 .card iframe {
   width: 100%;
   height: 420px;
-  border-radius: 10px;
-  margin: 20px 0;
+  border-radius: 12px;
+  margin: 24px 0;
+  border: 1px solid var(--accent-soft);
 }
+
 
 /* LIST */
 .card ul {
@@ -84,9 +101,10 @@ body {
 }
 
 .card li {
-  color: #9aa4b2;
-  margin-bottom: 6px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
 }
+
 
 /* CONTACT */
 .contact {
@@ -95,7 +113,12 @@ body {
 }
 
 a {
-  color: #6cff9a;
+  color: var(--accent);
   text-decoration: none;
 }
+
+a:hover {
+  text-decoration: underline;
+}
+
 
