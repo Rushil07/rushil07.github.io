@@ -48,9 +48,8 @@ body {
 
 /* HERO */
 .hero {
-  padding: 120px 8% 80px;
+  padding: 160px 8% 120px;
 }
-
 .hero h1 {
   font-size: 3.2rem;
   margin-bottom: 12px;
