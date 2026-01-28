@@ -119,16 +119,19 @@
   </section>
   
 <script>
+  /* =========================
+     NAV ACTIVE STATE
+  ========================== */
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-link");
 
   function setActiveLink() {
-    let current = "";
+    let current = "home";
 
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 140;
+      const sectionTop = section.offsetTop - 150;
       if (window.scrollY >= sectionTop) {
-        current = section.getAttribute("id");
+        current = section.id;
       }
     });
 
@@ -142,21 +145,19 @@
 
   window.addEventListener("scroll", setActiveLink);
   window.addEventListener("load", setActiveLink);
-</script>
 
-  <script>
+  /* =========================
+     FADE-IN OBSERVER
+  ========================== */
   const fadeElements = document.querySelectorAll(".fade-in");
 
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.15 });
 
   fadeElements.forEach(el => observer.observe(el));
 </script>
