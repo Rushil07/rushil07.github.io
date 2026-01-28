@@ -61,8 +61,18 @@ body {
 
 
 .category h2 {
-  margin-bottom: 30px;
-  font-size: 1.8rem;
+  position: relative;
+  display: inline-block;
+}
+
+.category h2::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 10px;
+  border-radius: 2px;
 }
 
 /* CARD */
