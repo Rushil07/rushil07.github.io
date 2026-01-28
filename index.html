@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rushil Malik | Level Designer</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=3">
+
+</head>
+<body>
+
 <nav class="nav">
   <div class="container nav-inner">
     <div class="nav-left">Rushil Malik</div>
@@ -30,9 +46,111 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="container">
-    <!-- hypercasual / aaa / ai sections unchanged -->
+  <!-- HYPERCASUAL -->
+  <section id="projects">
+    <div class="container">
+      <section id="hypercasual" class="category fade-in">
+        <h2>Hypercasual Games</h2>
+
+        <div class="card">
+        <h3>Runner Level Prototype</h3>
+
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+
+          <ul>
+            <li>Designed obstacle pacing and difficulty curve</li>
+            <li>Optimized layout for fast iteration</li>
+            <li>Built in Unity</li>
+          </ul>
+        </div>
+      </section>
+
+  <!-- AAA -->
+  <section id="aaa" class="category fade-in">
+    <h2>AAA / High-Fidelity Levels</h2>
+
+    <div class="card">
+      <h3>Horror Facility Level</h3>
+
+      <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID" allowfullscreen></iframe>
+
+      <ul>
+        <li>Player guidance using lighting and geometry</li>
+        <li>Tension pacing and encounter design</li>
+        <li>Designed with replayability in mind</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- AI -->
+  <section id="ai" class="category fade-in">
+    <h2>AI / Experimental Games</h2>
+
+    <div class="card">
+      <h3>AI-Driven Enemy Sandbox</h3>
+
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+
+      <ul>
+        <li>AI behavior testing spaces</li>
+        <li>Dynamic encounters based on player actions</li>
+        <li>System-driven level logic</li>
+      </ul>
+    </div>
+    </section>
   </div>
 </section>
+
+  <!-- CONTACT -->
+<section id="contact" class="contact fade-in">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:malikrushil@gmail.com">malikrushil@gmail.com</a></p>
+</section>
+  
+<script>
+  /* =========================
+     NAV ACTIVE STATE
+  ========================== */
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  function setActiveLink() {
+    let current = "home";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 150;
+      if (window.scrollY >= sectionTop) {
+        current = section.id;
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", setActiveLink);
+  window.addEventListener("load", setActiveLink);
+
+  /* =========================
+     FADE-IN OBSERVER
+  ========================== */
+  const fadeElements = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  fadeElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+
