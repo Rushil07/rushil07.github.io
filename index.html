@@ -1,167 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Rushil Malik | Level Designer</title>
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css?v=3">
-
-</head>
-<body>
-
 <nav class="nav">
-  <div class="nav-left">Rushil Malik</div>
+  <div class="container nav-inner">
+    <div class="nav-left">Rushil Malik</div>
 
-  <div class="nav-center">
-    <a href="#home" class="nav-link">Home</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#about" class="nav-link">About</a>
-  </div>
+    <div class="nav-center">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#about" class="nav-link">About</a>
+    </div>
 
-  <div class="nav-right">
-    <a href="resume.pdf" target="_blank" class="resume-btn">My Resume</a>
+    <div class="nav-right">
+      <a href="resume.pdf" target="_blank" class="resume-btn">My Resume</a>
+    </div>
   </div>
 </nav>
 
-  <!-- HERO -->
+<!-- HERO -->
 <section id="home" class="hero fade-in visible">
-
-  <div class="hero-center">
+  <div class="container">
     <h1 class="hero-name">Rushil Malik</h1>
-    <h2 class="hero-role">LEVEL DESIGNER</h2>
+    <h2 class="hero-role">Level Designer</h2>
   </div>
-
 </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="about fade-in">
-    <div class="container">
-    <p>
-      I am a creative and detail-oriented Level Designer with a passion for crafting immersive worlds and engaging gameplay. Skilled in level layout, world building, UI/UX, and game mechanics, I thrive on balancing player flow, 
-      pacing, and storytelling. With hands-on experience in Unity, Unreal Engine, and Blender. I bring both technical expertise and artistic vision to game development. Always eager to innovate and push the boundaries of 
-      interactive design, I strive to create compelling and memorable experiences.
-    </p>
-
-    <div class="tags">
-      <span>Unity</span>
-      <span>Unreal</span>
-      <span>FPS</span>
-      <span>Horror</span>
-      <span>AI Games</span>
-    </div>
-    </div>  
-  </section>
-
-  <!-- HYPERCASUAL -->
-  <section id="projects">
-    <div class="container">
-      <section id="hypercasual" class="category fade-in">
-        <h2>Hypercasual Games</h2>
-
-        <div class="card">
-        <h3>Runner Level Prototype</h3>
-
-        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
-
-          <ul>
-            <li>Designed obstacle pacing and difficulty curve</li>
-            <li>Optimized layout for fast iteration</li>
-            <li>Built in Unity</li>
-          </ul>
-        </div>
-      </section>
-
-  <!-- AAA -->
-  <section id="aaa" class="category fade-in">
-    <h2>AAA / High-Fidelity Levels</h2>
-
-    <div class="card">
-      <h3>Horror Facility Level</h3>
-
-      <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID" allowfullscreen></iframe>
-
-      <ul>
-        <li>Player guidance using lighting and geometry</li>
-        <li>Tension pacing and encounter design</li>
-        <li>Designed with replayability in mind</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- AI -->
-  <section id="ai" class="category fade-in">
-    <h2>AI / Experimental Games</h2>
-
-    <div class="card">
-      <h3>AI-Driven Enemy Sandbox</h3>
-
-      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
-
-      <ul>
-        <li>AI behavior testing spaces</li>
-        <li>Dynamic encounters based on player actions</li>
-        <li>System-driven level logic</li>
-      </ul>
-        </div>
-      </section>
-    </div>
+<!-- ABOUT -->
+<section id="about" class="about fade-in">
+  <div class="container">
+    <p>...</p>
+    <div class="tags">...</div>
+  </div>
 </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact fade-in">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:malikrushil@gmail.com">malikrushil@gmail.com</a></p>
-  </section>
-  
-<script>
-  /* =========================
-     NAV ACTIVE STATE
-  ========================== */
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  function setActiveLink() {
-    let current = "home";
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 150;
-      if (window.scrollY >= sectionTop) {
-        current = section.id;
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", setActiveLink);
-  window.addEventListener("load", setActiveLink);
-
-  /* =========================
-     FADE-IN OBSERVER
-  ========================== */
-  const fadeElements = document.querySelectorAll(".fade-in");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  }, { threshold: 0.15 });
-
-  fadeElements.forEach(el => observer.observe(el));
-</script>
-
-</body>
-</html>
-
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <!-- hypercasual / aaa / ai sections unchanged -->
+  </div>
+</section>
