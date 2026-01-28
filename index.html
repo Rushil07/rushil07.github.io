@@ -32,8 +32,6 @@
 
 </nav>
 
-
-
   <!-- HERO -->
 <section id="home" class="hero fade-in">
 
@@ -132,8 +130,8 @@
     let current = "";
 
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
-      if (scrollY >= sectionTop) {
+      const sectionTop = section.offsetTop - 140;
+      if (window.scrollY >= sectionTop) {
         current = section.getAttribute("id");
       }
     });
@@ -147,6 +145,7 @@
   }
 
   window.addEventListener("scroll", setActiveLink);
+  window.addEventListener("load", setActiveLink);
 </script>
 
 </body>
