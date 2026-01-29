@@ -71,6 +71,9 @@ body {
   font-weight: 500;
   padding: 4px 0;
   transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* underline base (hidden by default) */
@@ -106,6 +109,27 @@ body {
 .nav-link.active::after {
   transform: translateX(-50%) scaleX(1);
 }
+
+/* icon base */
+.nav-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* hover */
+.nav-link:hover .nav-icon {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* active */
+.nav-link.active .nav-icon {
+  opacity: 1;
+}
+
 
 .resume-btn {
   color: var(--accent);
