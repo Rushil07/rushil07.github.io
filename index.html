@@ -133,6 +133,8 @@
     }
   });
 
+ console.log("Active section:", current);
+    
   navLinks.forEach(link => {
     link.classList.remove("active");
     if (link.getAttribute("href") === `#${current}`) {
