@@ -31,7 +31,7 @@
 </nav>
 
 <!-- HERO -->
-<section id="home" class="hero fade-in visible">
+<section id="home" class="hero fade-in visible" data-nav="home">
   <div class="container">
     <h1 class="hero-name">Rushil Malik</h1>
     <h2 class="hero-role">Level Designer</h2>
@@ -45,9 +45,9 @@
 </section
 
 <!-- HYPERCASUAL -->
-  <section id="projects">
+  <section id="projects" data-nav="projects">
     <div class="container">
-      <section id="hypercasual" class="category fade-in">
+      <section id="hypercasual" class="category fade-in" data-nav="projects">
         <h2>Hypercasual Games</h2>
 
         <div class="card">
@@ -64,7 +64,7 @@
       </section>
 
   <!-- AAA -->
-  <section id="aaa" class="category fade-in">
+  <section id="aaa" class="category fade-in" data-nav="projects">
     <h2>AAA / High-Fidelity Levels</h2>
 
     <div class="card">
@@ -81,7 +81,7 @@
   </section>
 
   <!-- AI -->
-  <section id="ai" class="category fade-in">
+  <section id="ai" class="category fade-in" data-nav="projects">
     <h2>AI / Experimental Games</h2>
 
     <div class="card">
@@ -100,7 +100,7 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="about fade-in">
+<section id="about" class="about fade-in" data-nav="about">
   <div class="container">
     <p>...</p>
     <div class="tags">...</div>
@@ -124,9 +124,11 @@
     let current = "home";
 
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 150;
-      if (window.scrollY >= sectionTop) {
-        current = section.id;
+      const top = section.offsetTop - 160;
+      const height = section.offsetHeight;
+
+      if (window.scrollY >= top && window.scrollY < top + height) {
+        current = section.dataset.nav || section.id;
       }
     });
 
