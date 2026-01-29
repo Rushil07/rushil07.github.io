@@ -24,7 +24,7 @@ body {
 
 /* ====== LAYOUT CONTAINER ====== */
 .container {
-  max-width: 1100px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -94,7 +94,9 @@ body {
 
 /* ====== HERO ====== */
 .hero {
-  padding: 160px 0 80px;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
 }
 
 .hero-name {
@@ -109,6 +111,20 @@ body {
   color: var(--text-muted);
   margin-bottom: 32px;
   text-transform: uppercase;
+}
+
+.hero-desc {
+  max-width: 520px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-top: 24px;
+}
+
+.scroll-hint {
+  margin-top: 48px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  opacity: 0.6;
 }
 
 /* ====== ABOUT ====== */
