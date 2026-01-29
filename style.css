@@ -29,6 +29,10 @@ body {
   padding: 0 24px;
 }
 
+section[data-nav] {
+  scroll-margin-top: 120px; /* navbar height */
+}
+
 /* ====== NAV ====== */
 .nav {
   position: fixed;
