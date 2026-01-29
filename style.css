@@ -120,13 +120,6 @@ body {
   margin-top: 24px;
 }
 
-.scroll-hint {
-  margin-top: 48px;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  opacity: 0.6;
-}
-
 /* ====== ABOUT ====== */
 .about {
   padding: 60px 0;
