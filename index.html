@@ -117,31 +117,27 @@
   /* =========================
      NAV ACTIVE STATE
   ========================== */
-  const sections = document.querySelectorAll("section[id]");
+  const sections = document.querySelectorAll("section[data-nav]");
   const navLinks = document.querySelectorAll(".nav-link");
 
   function setActiveLink() {
-  let current = "home";
+    let current = "";
 
-  sections.forEach(section => {
-    const navKey = section.dataset.nav;
-    if (!navKey) return;
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
 
-    const sectionTop = section.offsetTop - 160;
-    if (window.scrollY >= sectionTop) {
-      current = navKey;
-    }
-  });
+      if (rect.top <= 120 && rect.bottom > 120) {
+        current = section.dataset.nav;
+      }
+    });
 
- console.log("Active section:", current);
-    
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active");
-    }
-  });
-}
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  }
 
   window.addEventListener("scroll", setActiveLink);
   window.addEventListener("load", setActiveLink);
