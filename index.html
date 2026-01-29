@@ -121,24 +121,25 @@
   const navLinks = document.querySelectorAll(".nav-link");
 
   function setActiveLink() {
-    let current = "home";
+  let current = "home";
 
-    sections.forEach(section => {
-      const top = section.offsetTop - 160;
-      const height = section.offsetHeight;
+  sections.forEach(section => {
+    const navKey = section.dataset.nav;
+    if (!navKey) return;
 
-      if (window.scrollY >= top && window.scrollY < top + height) {
-        current = section.dataset.nav || section.id;
-      }
-    });
+    const sectionTop = section.offsetTop - 160;
+    if (window.scrollY >= sectionTop) {
+      current = navKey;
+    }
+  });
 
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
-  }
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+}
 
   window.addEventListener("scroll", setActiveLink);
   window.addEventListener("load", setActiveLink);
