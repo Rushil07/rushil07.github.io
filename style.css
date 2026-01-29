@@ -64,19 +64,21 @@ body {
   justify-content: flex-end;
 }
 
+/* ----- NAV LINK -----*/
+
 .nav-link {
   position: relative;
   color: var(--text-muted);
   text-decoration: none;
   font-weight: 500;
-  padding: 4px 0;
-  transition: color 0.2s ease;
+  padding: 6px 0;
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: color 0.2s ease;
 }
 
-/* underline base (hidden by default) */
+/* underline base (hidden) */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -89,10 +91,12 @@ body {
 
   transform: translateX(-50%) scaleX(0);
   transform-origin: center;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.25s ease;
 }
 
-/* hover state */
+/* hover */
 .nav-link:hover {
   color: #fff;
 }
@@ -101,36 +105,40 @@ body {
   transform: translateX(-50%) scaleX(1);
 }
 
-/* active state (stays visible) */
+/* active (current section) */
 .nav-link.active {
   color: #fff;
 }
 
 .nav-link.active::after {
   transform: translateX(-50%) scaleX(1);
+  width: 26px; /* slightly wider = stronger emphasis */
 }
 
-/* icon base */
+/* ===== ICON ===== */
 .nav-icon {
   width: 16px;
   height: 16px;
   fill: currentColor;
-  opacity: 0.7;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0.65;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
-/* hover */
+/* icon hover */
 .nav-link:hover .nav-icon {
   opacity: 1;
   transform: translateY(-1px);
 }
 
-/* active */
+/* icon active */
 .nav-link.active .nav-icon {
   opacity: 1;
 }
 
 
+/* ------ RESUME BUTTON ----------- */
 .resume-btn {
   color: var(--accent);
   font-weight: 600;
