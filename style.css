@@ -143,6 +143,10 @@ body {
   padding: 8px 16px;
   border-radius: 999px;
 
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  
   font-weight: 600;
   font-size: 0.9rem;
   color: var(--accent);
@@ -158,10 +162,27 @@ body {
     color 0.2s ease;
 }
 
+.resume-icon {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  opacity: 0.9;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.resume-btn:hover .resume-icon {
+  transform: translateY(-1px);
+  opacity: 1;
+}
+
 /* hover */
 .resume-btn:hover {
   background: rgba(139, 92, 246, 0.18);
-  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.12);
+  box-shadow:
+    0 8px 24px rgba(139, 92, 246, 0.25),
+    0 0 0 1px rgba(139, 92, 246, 0.25);
   transform: translateY(-1px);
   color: #fff;
 }
