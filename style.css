@@ -65,17 +65,16 @@ body {
 }
 
 .nav-link {
+  position: relative;
   color: var(--text-muted);
   text-decoration: none;
-  position: relative;
   font-weight: 500;
+  padding: 4px 0;
+  transition: color 0.2s ease;
 }
 
-.nav-link.active {
-  color: #fff;
-}
-
-.nav-link.active::after {
+/* underline base (hidden by default) */
+.nav-link::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -83,7 +82,29 @@ body {
   width: 20px;
   height: 2px;
   background: var(--accent);
-  transform: translateX(-50%);
+  border-radius: 2px;
+
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* hover state */
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-link:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* active state (stays visible) */
+.nav-link.active {
+  color: #fff;
+}
+
+.nav-link.active::after {
+  transform: translateX(-50%) scaleX(1);
 }
 
 .resume-btn {
