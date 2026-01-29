@@ -137,10 +137,38 @@ body {
 
 
 /* ------ RESUME BUTTON ----------- */
+
 .resume-btn {
-  color: var(--accent);
+  position: relative;
+  padding: 8px 16px;
+  border-radius: 999px;
+
   font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--accent);
   text-decoration: none;
+
+  border: 1px solid var(--accent-soft);
+  background: rgba(139, 92, 246, 0.08);
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+/* hover */
+.resume-btn:hover {
+  background: rgba(139, 92, 246, 0.18);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.12);
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+/* active / click */
+.resume-btn:active {
+  transform: translateY(0);
 }
 
 /* ====== HERO ====== */
