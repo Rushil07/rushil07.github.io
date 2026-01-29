@@ -29,10 +29,6 @@ body {
   padding: 0 24px;
 }
 
-section[data-nav] {
-  scroll-margin-top: 120px; /* navbar height */
-}
-
 /* ====== NAV ====== */
 .nav {
   position: fixed;
@@ -178,8 +174,10 @@ section[data-nav] {
 }
 
 /* ====== ABOUT ====== */
-.about {
-  padding: 60px 0;
+#about {
+  min-height: 80vh;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .tags span {
@@ -220,4 +218,8 @@ a:hover {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+section[data-nav] {
+  scroll-margin-top: 140px;
 }
