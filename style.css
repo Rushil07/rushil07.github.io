@@ -218,7 +218,7 @@ main.tab-container {
 
 .hero-name {
   font-size: 3.5rem;
-  margin-bottom: 4px;
+  margin: 0;
   letter-spacing: -0.025em;
   font-weight: 700;
   text-transform: uppercase;
@@ -229,18 +229,18 @@ main.tab-container {
   font-size: 1.5rem;
   letter-spacing: 0.22em;
   color: var(--text-muted);
-  margin-bottom: 24px;
+  margin-top: 4px;
+  margin: 6px 0 0;
   opacity: 0.9;
   text-transform: uppercase;
   animation-delay: 0.15s;
 }
 
 .hero-desc {
-  max-width: 560px;
+  max-width: 520px;
   color: var(--text-muted);
   font-size: 1rem;
-  margin-top: 0;
-  margin-bottom: 32px;
+  margin: 20px auto 0;  /* consistent gap */
   animation-delay: 0.25s;
 }
 
