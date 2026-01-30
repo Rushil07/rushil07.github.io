@@ -209,11 +209,16 @@ main.tab-container {
 
 /* ================= HERO ================= */
 .hero {
-  min-height: calc(100vh - 72px); /* subtract navbar height */
+  min-height: 78vh; /* ⬅ was ~100vh */
   display: flex;
   align-items: center;
   text-align: center;
-  padding-bottom: 60px; /* tighter exit */
+  padding-bottom: 40px; /* ⬅ tighter exit */
+  position: relative;
+}
+
+.home-section {
+  padding-top: 40px; /* ⬅ was too large implicitly */
 }
 
 .hero-name {
@@ -256,6 +261,22 @@ main.tab-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 60%;
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(139, 92, 246, 0.35),
+    transparent
+  );
 }
 
 .hero-animate {
