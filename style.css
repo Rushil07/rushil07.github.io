@@ -247,6 +247,7 @@ main.tab-container {
 .hero-actions {
   margin-top: 40px;
   display: flex;
+  gap: 20px;
   justify-content: center;
   animation-delay: 0.35s;
 }
@@ -271,22 +272,76 @@ main.tab-container {
 }
 
 /* ================= BUTTONS ================= */
+
+/* shared button base */
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 22px;
+  border-radius: 999px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+/* icon inside buttons */
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  opacity: 0.9;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
 .primary-btn {
   padding: 10px 20px;
   border-radius: 999px;
   background: var(--accent);
   color: #fff;
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.35);
   font-weight: 600;
   text-decoration: none;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.45);
+}
+
+.primary-btn:hover .btn-icon {
+  transform: translateY(-1px);
+  opacity: 1;
 }
 
 .secondary-btn {
   padding: 10px 20px;
   border-radius: 999px;
   border: 1px solid var(--accent-soft);
+  background: transparent;
   color: var(--accent);
   font-weight: 600;
   text-decoration: none;
+}
+
+.secondary-btn:hover {
+  background: rgba(139, 92, 246, 0.12);
+  transform: translateY(-1px);
+}
+
+.secondary-btn:hover .btn-icon {
+  transform: translateY(-1px);
+  opacity: 1;
 }
 
 /* ================= SECTIONS ================= */
