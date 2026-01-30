@@ -205,9 +205,10 @@ body {
 
 /* ================= HERO ================= */
 .hero {
-  min-height: 90vh;
+  min-height: calc(100vh - 72px); /* subtract navbar height */
   display: flex;
   align-items: center;
+  text-align: center;
 }
 
 .hero-name {
