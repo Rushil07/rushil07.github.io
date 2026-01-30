@@ -271,6 +271,42 @@ main.tab-container {
   }
 }
 
+/* ====== HERO GLOW ====== */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* soft glow behind text */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 520px;
+  height: 320px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(139, 92, 246, 0.18),
+      rgba(139, 92, 246, 0.08) 40%,
+      transparent 70%
+    );
+
+  transform: translate(-50%, -55%);
+  filter: blur(40px);
+  opacity: 0.9;
+
+  pointer-events: none;
+}
+
 /* ================= BUTTONS ================= */
 
 /* shared button base */
