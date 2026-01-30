@@ -402,13 +402,6 @@ main.tab-container {
   opacity: 1;
 }
 
-.scroll-anchor {
-  margin-top: 48px;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  opacity: 0.6;
-}
-
 /* ================= SECTIONS ================= */
 .home-section {
   padding: 120px 0;
