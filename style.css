@@ -224,7 +224,7 @@ main.tab-container {
 }
 
 .hero-role {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   letter-spacing: 0.12em;
   color: var(--text-muted);
   margin-bottom: 20px; /* reduced */
