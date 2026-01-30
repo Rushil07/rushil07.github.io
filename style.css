@@ -217,18 +217,22 @@ main.tab-container {
 }
 
 .hero-name {
-  font-size: 4rem;
-  margin-bottom: 6px; /* was larger */
-  letter-spacing: -0.02em;
+  font-size: 3.5rem;
+  margin-bottom: 4px;
+  letter-spacing: -0.025em;
+  font-weight: 700;
   text-transform: uppercase;
+  animation-delay: 0.05s;
 }
 
 .hero-role {
   font-size: 1.5rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.22em;
   color: var(--text-muted);
-  margin-bottom: 20px; /* reduced */
+  margin-bottom: 24px;
+  opacity: 0.9;
   text-transform: uppercase;
+  animation-delay: 0.15s;
 }
 
 .hero-desc {
@@ -237,12 +241,14 @@ main.tab-container {
   font-size: 1rem;
   margin-top: 0;
   margin-bottom: 32px;
+  animation-delay: 0.25s;
 }
 
 .hero-actions {
   margin-top: 40px;
   display: flex;
   justify-content: center;
+  animation-delay: 0.35s;
 }
 
 .hero .container {
@@ -251,6 +257,18 @@ main.tab-container {
   align-items: center;
 }
 
+.hero-animate {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: heroFadeUp 0.7s ease forwards;
+}
+
+@keyframes heroFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* ================= BUTTONS ================= */
 .primary-btn {
