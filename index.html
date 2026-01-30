@@ -4,97 +4,178 @@
   <meta charset="UTF-8" />
   <title>Rushil Malik | Level Designer</title>
 
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- NAV -->
+<!-- ================= NAV ================= -->
 <nav class="nav">
   <div class="container nav-inner">
+
     <div class="nav-left"></div>
 
     <div class="nav-center">
-      <a href="index.html" class="nav-link active">Home</a>
-      <a href="projects.html" class="nav-link">Projects</a>
-      <a href="about.html" class="nav-link">About</a>
+      <a href="#" class="nav-link active" data-tab="home">Home</a>
+      <a href="#" class="nav-link" data-tab="projects">Projects</a>
+      <a href="#" class="nav-link" data-tab="about">About</a>
     </div>
 
     <div class="nav-right">
       <a href="resume.pdf" target="_blank" class="resume-btn">
+        <!-- optional icon -->
+        <svg class="resume-icon" viewBox="0 0 24 24">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <path d="M14 2v6h6"/>
+        </svg>
         My Resume
       </a>
     </div>
+
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <h1 class="hero-name">Rushil Malik</h1>
-    <h2 class="hero-role">Level Designer</h2>
+<!-- ================= MAIN CONTENT ================= -->
+<main class="tab-container">
 
-    <p class="hero-desc">
-      Designing gameplay-focused levels with strong player flow,
-      visual guidance, and system-driven design.
-    </p>
+  <!-- ========== HOME TAB ========== -->
+  <section class="tab-panel active" data-tab="home">
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-name">Rushil Malik</h1>
+        <h2 class="hero-role">Level Designer</h2>
 
-    <div class="hero-actions">
-      <a href="projects.html" class="primary-btn">View Projects</a>
-      <a href="about.html" class="secondary-btn">About Me</a>
-    </div>
-  </div>
-</section>
+        <p class="hero-desc">
+          Designing gameplay-focused levels with strong player flow,
+          visual guidance, and system-driven design.
+        </p>
 
-<!-- WHAT I DO -->
-<section class="home-section">
-  <div class="container">
-    <h2 class="section-title">What I Do</h2>
-
-    <div class="home-grid">
-      <div class="home-card">
-        <h3>Level Design</h3>
-        <p>Player flow, pacing, encounter design, and spatial storytelling.</p>
+        <div class="hero-actions">
+          <a href="#" class="primary-btn" data-tab-trigger="projects">View Projects</a>
+          <a href="#" class="secondary-btn" data-tab-trigger="about">About Me</a>
+        </div>
       </div>
+    </section>
 
-      <div class="home-card">
-        <h3>Game Genres</h3>
-        <p>FPS, Horror, Hypercasual, and experimental AI-driven gameplay.</p>
+    <section class="home-section">
+      <div class="container">
+        <h2 class="section-title">What I Do</h2>
+
+        <div class="home-grid">
+          <div class="home-card">
+            <h3>Level Design</h3>
+            <p>Player flow, pacing, encounter design, and spatial storytelling.</p>
+          </div>
+
+          <div class="home-card">
+            <h3>Game Genres</h3>
+            <p>FPS, Horror, Hypercasual, and experimental AI-driven gameplay.</p>
+          </div>
+
+          <div class="home-card">
+            <h3>Tools</h3>
+            <p>Unity, Unreal Engine, Blender, rapid prototyping workflows.</p>
+          </div>
+        </div>
       </div>
+    </section>
+  </section>
 
-      <div class="home-card">
-        <h3>Tools</h3>
-        <p>Unity, Unreal Engine, Blender, rapid prototyping workflows.</p>
+  <!-- ========== PROJECTS TAB ========== -->
+  <section class="tab-panel" data-tab="projects">
+    <section class="home-section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="home-grid">
+          <div class="home-card">
+            <h3>Horror Facility Level</h3>
+            <p>Atmospheric level focused on tension, lighting, and pacing.</p>
+          </div>
+
+          <div class="home-card">
+            <h3>Runner Prototype</h3>
+            <p>Fast-iteration hypercasual level with difficulty scaling.</p>
+          </div>
+
+          <div class="home-card">
+            <h3>AI Enemy Sandbox</h3>
+            <p>System-driven encounters and AI behavior testing spaces.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+  </section>
 
-<!-- FEATURED PROJECTS -->
-<section class="home-section">
-  <div class="container">
-    <h2 class="section-title">Featured Work</h2>
+  <!-- ========== ABOUT TAB ========== -->
+  <section class="tab-panel" data-tab="about">
+    <section class="home-section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
 
-    <div class="home-grid">
-      <div class="home-card">
-        <h3>Horror Facility Level</h3>
-        <p>Atmospheric level focused on tension, lighting, and pacing.</p>
+        <p style="max-width: 700px; color: var(--text-muted);">
+          I’m a creative and detail-oriented Level Designer with a passion for
+          crafting immersive worlds and engaging gameplay. I focus on player
+          flow, pacing, and environmental storytelling, with experience across
+          Unity, Unreal Engine, and rapid prototyping pipelines.
+        </p>
+
+        <div class="tags" style="margin-top: 24px;">
+          <span>Unity</span>
+          <span>Unreal</span>
+          <span>FPS</span>
+          <span>Horror</span>
+          <span>AI Games</span>
+        </div>
+
+        <div style="margin-top: 40px;">
+          <p>Email: <a href="mailto:malikrushil@gmail.com">malikrushil@gmail.com</a></p>
+        </div>
       </div>
+    </section>
+  </section>
 
-      <div class="home-card">
-        <h3>Runner Prototype</h3>
-        <p>Fast-iteration hypercasual level with difficulty scaling.</p>
-      </div>
-    </div>
+</main>
 
-    <div class="home-cta">
-      <a href="projects.html" class="primary-btn">See All Projects</a>
-    </div>
-  </div>
-</section>
+<!-- ================= TAB SWITCH SCRIPT ================= -->
+<script>
+  const navLinks = document.querySelectorAll(".nav-link");
+  const panels = document.querySelectorAll(".tab-panel");
+  const tabTriggers = document.querySelectorAll("[data-tab-trigger]");
+
+  function switchTab(target) {
+    // nav
+    navLinks.forEach(link => {
+      link.classList.toggle("active", link.dataset.tab === target);
+    });
+
+    // panels
+    panels.forEach(panel => {
+      panel.classList.toggle("active", panel.dataset.tab === target);
+    });
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      switchTab(link.dataset.tab);
+    });
+  });
+
+  tabTriggers.forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      switchTab(btn.dataset.tabTrigger);
+    });
+  });
+</script>
 
 </body>
 </html>
