@@ -30,6 +30,10 @@ body {
   padding: 0 24px;
 }
 
+main.tab-container {
+  padding-top: 72px; /* navbar height */
+}
+
 /* ================= NAV ================= */
 .nav {
   position: fixed;
@@ -209,11 +213,12 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
+  padding-bottom: 60px; /* tighter exit */
 }
 
 .hero-name {
   font-size: 3.2rem;
-  margin: 0 0 8px;
+  margin-bottom: 6px; /* was larger */
   letter-spacing: -0.02em;
 }
 
@@ -221,21 +226,30 @@ body {
   font-size: 1.1rem;
   letter-spacing: 0.12em;
   color: var(--text-muted);
-  margin-bottom: 32px;
+  margin-bottom: 20px; /* reduced */
   text-transform: uppercase;
 }
 
 .hero-desc {
-  max-width: 520px;
+  max-width: 560px;
   color: var(--text-muted);
   font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 32px;
 }
 
 .hero-actions {
   margin-top: 40px;
   display: flex;
-  gap: 16px;
+  justify-content: center;
 }
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 /* ================= BUTTONS ================= */
 .primary-btn {
