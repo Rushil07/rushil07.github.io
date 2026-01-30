@@ -4,56 +4,35 @@
   <meta charset="UTF-8" />
   <title>Rushil Malik | Level Designer</title>
 
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=3">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- NAV -->
 <nav class="nav">
   <div class="container nav-inner">
     <div class="nav-left"></div>
-      <div class="nav-center">
-  <a href="#home" class="nav-link">
-    <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>
-    </svg>
-    <span>Home</span>
-  </a>
 
-  <a href="#projects" class="nav-link">
-    <svg class="nav-icon" viewBox="0 0 24 24">
-      <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-    </svg>
-    <span>Projects</span>
-  </a>
-
-  <a href="#about" class="nav-link">
-    <svg class="nav-icon" viewBox="0 0 24 24">
-      <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5z"/>
-    </svg>
-    <span>About Me</span>
-  </a>
-</div>
+    <div class="nav-center">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="about.html" class="nav-link">About</a>
+    </div>
 
     <div class="nav-right">
-      <a href="Rushil Cv Resume.pdf" target="_blank" class="resume-btn">
-          <svg class="resume-icon" viewBox="0 0 24 24">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <path d="M14 2v6h6"/>
-          </svg>
-          My Resume
+      <a href="resume.pdf" target="_blank" class="resume-btn">
+        My Resume
       </a>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<section id="home" class="hero fade-in visible" data-nav="home">
+<section class="hero">
   <div class="container">
     <h1 class="hero-name">Rushil Malik</h1>
     <h2 class="hero-role">Level Designer</h2>
@@ -62,137 +41,60 @@
       Designing gameplay-focused levels with strong player flow,
       visual guidance, and system-driven design.
     </p>
-    
+
+    <div class="hero-actions">
+      <a href="projects.html" class="primary-btn">View Projects</a>
+      <a href="about.html" class="secondary-btn">About Me</a>
+    </div>
   </div>
 </section>
 
-<!-- HYPERCASUAL -->
-  <section id="projects" data-nav="projects">
-    <div class="container">
-      <section id="hypercasual" class="category fade-in">
-        <h2>Hypercasual Games</h2>
-
-        <div class="card">
-        <h3>Runner Level Prototype</h3>
-
-        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
-
-          <ul>
-            <li>Designed obstacle pacing and difficulty curve</li>
-            <li>Optimized layout for fast iteration</li>
-            <li>Built in Unity</li>
-          </ul>
-        </div>
-      </section>
-
-  <!-- AAA -->
-  <section id="aaa" class="category fade-in">
-    <h2>AAA / High-Fidelity Levels</h2>
-
-    <div class="card">
-      <h3>Horror Facility Level</h3>
-
-      <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID" allowfullscreen></iframe>
-
-      <ul>
-        <li>Player guidance using lighting and geometry</li>
-        <li>Tension pacing and encounter design</li>
-        <li>Designed with replayability in mind</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- AI -->
-  <section id="ai" class="category fade-in">
-    <h2>AI / Experimental Games</h2>
-
-    <div class="card">
-      <h3>AI-Driven Enemy Sandbox</h3>
-
-      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
-
-      <ul>
-        <li>AI behavior testing spaces</li>
-        <li>Dynamic encounters based on player actions</li>
-        <li>System-driven level logic</li>
-      </ul>
-    </div>
-    </section>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="about fade-in" data-nav="about">
+<!-- WHAT I DO -->
+<section class="home-section">
   <div class="container">
-    <p> Test - Creative and detail-oriented Level Designer with a passion for crafting
-        immersive worlds and engaging gameplay. Skilled in level layout, world
-        building, UI/UX, and game mechanics, I thrive on balancing player flow,
-        pacing, and storytelling. With hands-on experience in Unity, Unreal Engine,
-        and Blender, I bring both technical expertise and artistic vision to game
-        development. Always eager to innovate and push the boundaries of
-        interactive design, I strive to create compelling and memorable experiences. </p>
-    
-    <div class="tags"> Test - Creative and detail-oriented Level Designer with a passion for crafting
-immersive worlds and engaging gameplay. Skilled in level layout, world
-building, UI/UX, and game mechanics, I thrive on balancing player flow,
-pacing, and storytelling. With hands-on experience in Unity, Unreal Engine,
-and Blender, I bring both technical expertise and artistic vision to game
-development. Always eager to innovate and push the boundaries of
-interactive design, I strive to create compelling and memorable experiences. </div>
+    <h2 class="section-title">What I Do</h2>
+
+    <div class="home-grid">
+      <div class="home-card">
+        <h3>Level Design</h3>
+        <p>Player flow, pacing, encounter design, and spatial storytelling.</p>
+      </div>
+
+      <div class="home-card">
+        <h3>Game Genres</h3>
+        <p>FPS, Horror, Hypercasual, and experimental AI-driven gameplay.</p>
+      </div>
+
+      <div class="home-card">
+        <h3>Tools</h3>
+        <p>Unity, Unreal Engine, Blender, rapid prototyping workflows.</p>
+      </div>
+    </div>
   </div>
-</section> 
-  
-<!-- CONTACT -->
-<section id="contact" class="contact fade-in">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:malikrushil@gmail.com">malikrushil@gmail.com</a></p>
 </section>
-  
-<script>
-  /* =========================
-     NAV ACTIVE STATE
-  ========================== */
-  const sections = document.querySelectorAll("section[data-nav]");
-  const navLinks = document.querySelectorAll(".nav-link");
 
-  function setActiveLink() {
-    let current = "";
+<!-- FEATURED PROJECTS -->
+<section class="home-section">
+  <div class="container">
+    <h2 class="section-title">Featured Work</h2>
 
-    sections.forEach(section => {
-      const rect = section.getBoundingClientRect();
+    <div class="home-grid">
+      <div class="home-card">
+        <h3>Horror Facility Level</h3>
+        <p>Atmospheric level focused on tension, lighting, and pacing.</p>
+      </div>
 
-      if (rect.top <= 120 && rect.bottom > 120) {
-        current = section.dataset.nav;
-      }
-    });
+      <div class="home-card">
+        <h3>Runner Prototype</h3>
+        <p>Fast-iteration hypercasual level with difficulty scaling.</p>
+      </div>
+    </div>
 
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", setActiveLink);
-  window.addEventListener("load", setActiveLink);
-
-  /* =========================
-     FADE-IN OBSERVER
-  ========================== */
-  const fadeElements = document.querySelectorAll(".fade-in");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  }, { threshold: 0.15 });
-
-  fadeElements.forEach(el => observer.observe(el));
-</script>
+    <div class="home-cta">
+      <a href="projects.html" class="primary-btn">See All Projects</a>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
-
