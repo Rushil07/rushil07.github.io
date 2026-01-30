@@ -217,9 +217,10 @@ main.tab-container {
 }
 
 .hero-name {
-  font-size: 3.2rem;
+  font-size: 4rem;
   margin-bottom: 6px; /* was larger */
   letter-spacing: -0.02em;
+  text-transform: uppercase;
 }
 
 .hero-role {
