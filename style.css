@@ -331,25 +331,28 @@ main.tab-container {
 
 /* ===== Scroll Indicator ===== */
 .scroll-indicator {
-  margin: 18px auto 0;
+  margin-top: 28px;
   width: fit-content;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
 
   color: rgba(255,255,255,0.42);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
+  opacity: 0.45;
   text-transform: uppercase;
 }
 
 .scroll-arrow {
-  width: 32px;
-  height: 32px;
-  fill: rgba(255,255,255,0.75);
+  stroke: rgba(255,255,255,.75);
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 
   animation: scrollDrop 1.8s infinite;
 }
