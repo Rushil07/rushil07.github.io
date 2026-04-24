@@ -332,19 +332,13 @@ main.tab-container {
 
 /* ===== Scroll Indicator ===== */
 .scroll-indicator{
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  gap: 6px;
-  margin: 18px auto 0;
-
-  position: relative;
-  left: auto;
-  right: auto;
+   width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  margin:0 auto;
+  transform: translateY(55px);
 }
 
 .scroll-indicator span{
