@@ -329,56 +329,64 @@ main.tab-container {
   pointer-events: none;
 }
 
+
 /* ===== Scroll Indicator ===== */
-.scroll-indicator {
-  margin-top: 28px;
-  width: fit-content;
+.scroll-indicator{
+  width: 100%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
 
-  color: rgba(255,255,255,0.42);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  opacity: 0.45;
-  text-transform: uppercase;
+  gap: 6px;
+  margin: 18px auto 0;
+
+  position: relative;
+  left: auto;
+  right: auto;
 }
 
-.scroll-arrow {
-  stroke: rgba(255,255,255,.75);
+.scroll-indicator span{
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+  color: rgba(255,255,255,0.38);
+}
+
+.scroll-arrow{
+  width: 38px;
+  height: 38px;
+
+  stroke: rgba(255,255,255,0.72);
   stroke-width: 1.8;
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
 
-  animation: scrollDrop 1.8s infinite;
+  animation: arrowDrop 1.8s infinite;
 }
 
-/* animated drop */
-@keyframes scrollDrop {
-  0% {
+@keyframes arrowDrop{
+  0%{
     transform: translateY(-4px);
     opacity: 0;
   }
 
-  20% {
+  20%{
     opacity: 1;
   }
 
-  70% {
-    transform: translateY(10px);
+  70%{
+    transform: translateY(8px);
     opacity: 1;
   }
 
-  100% {
-    transform: translateY(18px);
+  100%{
+    transform: translateY(16px);
     opacity: 0;
   }
 }
-
 /* ================= BUTTONS ================= */
 
 /* shared button base */
