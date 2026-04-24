@@ -293,52 +293,6 @@ main.tab-container {
   }
 }
 
-/* ===== Scroll Down Button ===== */
-.scroll-down {
-  margin-top: 42px;
-  width: fit-content;
-
-  display: flex;
-  align-items: center;
-  gap: 14px;
-
-  padding: 16px 30px;
-  border-radius: 999px;
-
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-
-  color: rgba(255,255,255,0.75);
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  opacity: 0.82;
-
-  backdrop-filter: blur(8px);
-
-  transition: all 0.25s ease;
-}
-
-.scroll-down:hover {
-  transform: translateY(-2px);
-  background: rgba(255,255,255,0.07);
-  color: white;
-}
-
-.scroll-icon {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-
-  animation: bounceArrow 1.8s infinite;
-}
-
-/* arrow animation */
-@keyframes bounceArrow {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(4px); }
-}
-
 /* ====== HERO GLOW ====== */
 .hero {
   position: relative;
@@ -373,6 +327,53 @@ main.tab-container {
   opacity: 0.9;
 
   pointer-events: none;
+}
+
+/* ===== Scroll Indicator ===== */
+.scroll-indicator {
+  margin: 18px auto 0;
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  color: rgba(255,255,255,0.42);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.scroll-arrow {
+  width: 32px;
+  height: 32px;
+  fill: rgba(255,255,255,0.75);
+
+  animation: scrollDrop 1.8s infinite;
+}
+
+/* animated drop */
+@keyframes scrollDrop {
+  0% {
+    transform: translateY(-4px);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  70% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(18px);
+    opacity: 0;
+  }
 }
 
 /* ================= BUTTONS ================= */
